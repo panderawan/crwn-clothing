@@ -1,0 +1,23 @@
+[33mcommit 6f0d8cf39b9fcba6520db703fc9ff6946bb24440[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ruddy.A <panderawan@gmail.com>
+Date:   Thu Oct 28 15:10:44 2021 +0200
+
+    update our menu-items to navigate withRouter HOC
+
+[33mcommit 7ead5d6f763ac0103edcf6b528dfef93b3ec8404[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ruddy.A <panderawan@gmail.com>
+Date:   Thu Oct 21 22:09:27 2021 +0200
+
+    broken our homepage into smaller components, finished styling our menu-item components
+
+[33mcommit e0f2e375a8b19a6d2d97a8480a8ea1ec903d8eb5[m
+Author: Ruddy.A <panderawan@gmail.com>
+Date:   Wed Oct 20 21:33:37 2021 +0200
+
+    Created project with Create react app and added files for homepage
+
+[33mcommit fa559440a939f09b70ed4e9ef781f6e2e1180abc[m
+Author: Ruddy.A <panderawan@gmail.com>
+Date:   Wed Oct 20 15:08:26 2021 +0200
+
+    Initialize project using Create React App
