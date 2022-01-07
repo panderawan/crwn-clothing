@@ -16,7 +16,6 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors.js';
 import { createStructuredSelector } from 'reselect';
-
 class App extends React.Component {
 	unsubscribeFromAuth = null;
 
@@ -33,7 +32,12 @@ class App extends React.Component {
 						...snapShot.data()
 					});
 				});
-			} else setCurrentUser(userAuth);
+			}
+			setCurrentUser(userAuth);
+			// addCollectionAndDocuments(
+			// 	'collections',
+			// 	collectionsArray.map(({ title, items }) => ({ title, items }))
+			// );
 		});
 	}
 
