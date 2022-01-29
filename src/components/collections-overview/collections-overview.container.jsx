@@ -1,35 +1,41 @@
-import { useSelector } from 'react-redux';
+//! original code
+
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { compose } from 'redux';
+
+import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 import WithSpinner from '../with-spinner/with-spinner.component';
 import CollectionsOverview from './collections-overview.component';
-import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 
-export default function CollectionOverviewContainer() {
-	const collectionOverviewLoading = useSelector(selectIsCollectionFetching);
-	return WithSpinner({ isLoading: collectionOverviewLoading })(
-		CollectionsOverview
-	);
-}
+const mapStateToProps = createStructuredSelector({
+	isLoading: selectIsCollectionFetching
+});
 
-// import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
+const CollectionsOverviewContainer = compose(
+	connect(mapStateToProps),
+	WithSpinner
+)(CollectionsOverview);
 
-// import { connect } from 'react-redux';
-// import { createStructuredSelector } from 'reselect';
-// import { compose } from 'redux';
+export default CollectionsOverviewContainer;
 
-// import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
+// ! Second attempt
+
+// import { useSelector } from 'react-redux';
 // import WithSpinner from '../with-spinner/with-spinner.component';
 // import CollectionsOverview from './collections-overview.component';
+// import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 
-// const mapStateToProps = createStructuredSelector({
-// 	isLoading: selectIsCollectionFetching
-// });
+// export default function CollectionOverviewContainer() {
+// 	const collectionOverviewLoading = useSelector(selectIsCollectionFetching);
+// 	return (
+// 		<WithSpinner isLoading={collectionOverviewLoading}>
+// 			<CollectionsOverview />
+// 		</WithSpinner>
+// 	);
+// }
 
-// const CollectionsOverviewContainer = compose(
-// 	connect(mapStateToProps),
-// 	WithSpinner
-// )(CollectionsOverview);
-
-// export default CollectionsOverviewContainer;
+//! Code you provided
 
 // import {useSelector} from 'react-redux';
 // import WithSpinner from './with-spinner-component-location';
